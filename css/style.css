@@ -471,3 +471,234 @@ body.cursor-hover .cursor-glow { transform: scale(1.7); border-color: rgba(45,91
   .lightbox__prev, .lightbox__next { top: auto; bottom: 82px; transform: none; }
   .lightbox__caption { bottom: 32px; }
 }
+
+
+/* =====================================================
+   RESPONSIVE DESIGN - MOBILE & TABLET
+   ===================================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero-title,
+  .page-title {
+    font-size: clamp(3rem, 9vw, 6rem);
+  }
+
+  .hero-logo {
+    width: min(260px, 60vw);
+  }
+
+  .section {
+    padding: 90px 6%;
+  }
+
+  .about-grid,
+  .contact-grid,
+  .services-grid,
+  .why-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .gallery-masonry {
+    columns: 2;
+  }
+}
+
+/* Smartphone */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    padding: 14px 18px;
+  }
+
+  .nav-logo img {
+    width: 44px;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 76px;
+    left: 16px;
+    right: 16px;
+    padding: 18px;
+    border-radius: 24px;
+    background: rgba(5, 5, 5, 0.82);
+    backdrop-filter: blur(22px);
+    border: 1px solid rgba(45, 91, 255, 0.35);
+    box-shadow: 0 20px 60px rgba(45, 91, 255, 0.25);
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .hero {
+    min-height: 100svh;
+    padding: 120px 18px 60px;
+  }
+
+  .hero-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-logo {
+    width: min(230px, 72vw);
+    margin-bottom: 24px;
+  }
+
+  .hero-title {
+    font-size: clamp(3.4rem, 18vw, 5.8rem);
+    letter-spacing: -0.06em;
+    line-height: 0.9;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 0.18em;
+    line-height: 1.7;
+    max-width: 320px;
+    margin-inline: auto;
+  }
+
+  .hero-actions,
+  .cta-actions,
+  .contact-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 14px;
+  }
+
+  .btn,
+  .premium-btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 54px;
+  }
+
+  .section {
+    padding: 72px 18px;
+  }
+
+  .section-title {
+    font-size: clamp(2.2rem, 12vw, 4rem);
+    line-height: 0.95;
+  }
+
+  .section-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.24em;
+  }
+
+  .about-grid,
+  .contact-grid,
+  .services-grid,
+  .why-grid,
+  .stats-grid,
+  .timeline-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .glass-card,
+  .service-card,
+  .contact-card,
+  .faq-item {
+    border-radius: 24px;
+    padding: 24px;
+  }
+
+  .image-mosaic,
+  .visual-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .image-card,
+  .mosaic-card {
+    min-height: 280px;
+  }
+
+  .horizontal-gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding-bottom: 18px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .horizontal-gallery .gallery-card {
+    min-width: 82vw;
+    scroll-snap-align: center;
+  }
+
+  .gallery-masonry {
+    columns: 1;
+    column-gap: 0;
+  }
+
+  .gallery-item {
+    margin-bottom: 18px;
+    break-inside: avoid;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 50px 18px 28px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .back-to-top {
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .cursor,
+  .cursor-glow {
+    display: none;
+  }
+}
+
+/* Smartphone piccoli */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: clamp(3rem, 20vw, 4.6rem);
+  }
+
+  .hero-logo {
+    width: min(200px, 76vw);
+  }
+
+  .page-hero {
+    min-height: 70vh;
+    padding: 120px 18px 60px;
+  }
+
+  .page-title {
+    font-size: clamp(2.7rem, 16vw, 4.6rem);
+  }
+
+  .card-icon {
+    width: 58px;
+    height: 58px;
+    font-size: 1.4rem;
+  }
+
+  .stat-number {
+    font-size: 3rem;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+  }
+
+  .lightbox-content {
+    width: 94vw;
+    max-height: 78vh;
+  }
+}
